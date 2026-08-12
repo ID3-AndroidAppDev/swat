@@ -12,5 +12,8 @@ This repo archives selected final projects from S.W.A.T teams in the course "Int
   - [FitnessPartner](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_FitnessPartner)
   - [FitbitApi](https://github.com/ID3-finalProject-archive/swat/tree/main/2023_FitbitApi)
  
+* Education
+  - [Ankers](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_Ankers)
+ 
 * Utilities
   - [SportsTimer](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_SportsTimer)
