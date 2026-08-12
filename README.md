@@ -13,6 +13,7 @@ This repo archives selected final projects from S.W.A.T teams in the course "Int
   - [FitbitApi](https://github.com/ID3-finalProject-archive/swat/tree/main/2023_FitbitApi)
  
 * Education
+  - [KotobaDrop](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_KotobaDrop)
   - [Ankers](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_Ankers)
  
 * Utilities
