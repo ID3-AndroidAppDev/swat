@@ -5,8 +5,9 @@ This repo archives selected final projects from S.W.A.T teams in the course "Int
   - [JankenGame](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_JankenGame)
   - [TarotGame](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_TarotGame)
 
-* Food
+* Food & Drink
   - [MealPlanner](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_MealPlanner)
+  - [KUASCafeteria](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_KUAScafeteria)
  
 * Health/Fitness
   - [FitnessPartner](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_FitnessPartner)
