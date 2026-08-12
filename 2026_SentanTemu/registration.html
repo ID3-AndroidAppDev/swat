@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Course Checklist</title>
+
+  <style>
+    :root {
+      --primary-green: #9ACD32;
+      --secondary-green: #7ba82a;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8e8e8;
+      margin: 0;
+    }
+
+    #pageContent {
+      margin: 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background: white;
+      border-bottom: 4px solid #90c41f;
+      margin: 0;
+    }
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+      color: #0e955a;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .logo {
+      width: auto;
+      height: auto;
+      max-height: 55px;
+    }
+
+    .logo-link {
+      display: block;
+    }
+
+    .menu-btn {
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 12px;
+      background: #0e955a;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-btn:hover {
+      background: #90c41f;
+    }
+
+    .nav-sidebar {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: white;
+      border-left: 4px solid #0e955a;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    .nav-sidebar.active {
+      right: 0;
+    }
+
+    .nav-sidebar h3 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #0e955a;
+      border-bottom: 2px solid #90c41f;
+      padding-bottom: 5px;
+    }
+
+    .nav-sidebar a {
+      display: block;
+      text-decoration: none;
+      color: #222;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+    }
+
+    .nav-sidebar a:hover {
+      background: #90c41f;
+      color: white;
+    }
+
+    .close-btn {
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #0e955a;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    h1 {
+      color: #4CAF00;
+    }
+
+    h2 {
+      color: #4CAF00;
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    .course {
+      margin: 5px 0;
+      padding: 5px;
+      background-color: #f5f5f5;
+    }
+
+    .credits {
+      color: gray;
+      font-size: 14px;
+    }
+
+    #progressBarOutside {
+      width: 100%;
+      background-color: #d3d3d3;
+      border: 1px solid gray;
+      height: 25px;
+    }
+
+    #progressBarInside {
+      height: 100%;
+      background-color: #9ACD32;
+      width: 0%;
+      text-align: center;
+      color: #2e4d00;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin: 3px;
+      background-color: #f5f5f5;
+      border: 1px solid gray;
+    }
+
+    .selectedButton {
+      background-color: #9ACD32;
+      color: #2e4d00;
+      border: 1px solid #7ba82a;
+    }
+
+    .recommended {
+      border: 2px solid #9ACD32;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 12px 16px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .logo {
+        max-width: 120px;
+      }
+
+      .menu-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <a href="homepage.html" class="logo-link">
+    <img
+      class="logo"
+      src="https://www.kuas.ac.jp/wp-content/themes/kuasuni-theme/build/images/kuasuni-logo-sm.png"
+      alt="KUAS Logo">
+  </a>
+
+  <h1>KUAS ナビ</h1>
+
+  <button class="menu-btn" type="button" onclick="toggleMenu()">☰</button>
+
+</header>
+
+<div id="nav-sidebar" class="nav-sidebar">
+
+  <button class="close-btn" type="button" onclick="toggleMenu()">✕</button>
+
+  <h3>Academic</h3>
+  <a href="ID3-Calendar.html">Schedule</a>
+  <a href="#">Attendance</a>
+  <a href="calculus-linear-algebra.html">Class Profile</a>
+
+  <h3>Student Services</h3>
+  <a href="registration.html">Registration</a>
+  <a href="ID3-QnA.html">Q&amp;A</a>
+  <a href="#">Notices</a>
+
+  <h3>Communication</h3>
+  <a href="#">Sentan Mail</a>
+  <a href="#">Announcements</a>
+
+  <h3>Settings</h3>
+  <a href="#">Preferences</a>
+
+</div>
+
+<div id="pageContent">
+
+  <h2>My Course Checklist</h2>
+
+  <p>Check off the mandatory classes you have finished. Then pick a career goal to see elective suggestions.</p>
+
+  <h2>Progress: <span id="creditsDone">0</span> / <span id="creditsTotal">0</span> credits</h2>
+
+  <div id="progressBarOutside">
+    <div id="progressBarInside">0%</div>
+  </div>
+
+  <h2>Mandatory Courses</h2>
+
+  <div id="courseListDiv"></div>
+
+  <h2>Pick Your Career Goal</h2>
+
+  <div id="goalButtonsDiv"></div>
+
+  <h2>Suggested Electives</h2>
+
+  <div id="electiveListDiv"></div>
+
+  <br>
+
+  <button onclick="submitForm()">Submit</button>
+
+  <div id="submitMessage"></div>
+
+</div>
+
+<script>
+
+function toggleMenu() {
+  var navSidebar = document.getElementById("nav-sidebar");
+  navSidebar.classList.toggle("active");
+}
+
+var mandatoryCourses = [
+  { id: 1, code: "JPN 101", name: "Japanese", credits: 2, group: "Core Requirements", done: false },
+  { id: 2, code: "MATH 210", name: "Calculus", credits: 4, group: "Core Requirements", done: false },
+  { id: 3, code: "MATH 220", name: "Linear Algebra", credits: 3, group: "Core Requirements", done: false },
+  { id: 4, code: "ME 230", name: "Fundamental Mechanics", credits: 3, group: "Core Requirements", done: false },
+  { id: 5, code: "CS 110", name: "Introduction to Python", credits: 3, group: "Core Requirements", done: false },
+  { id: 6, code: "PHYS 240", name: "Engineering Physics", credits: 4, group: "Core Requirements", done: false },
+  { id: 7, code: "PE 300", name: "Sports Practical (Choose an Event)", credits: 2, group: "Physical Education", done: false, hasDropdown: true },
+  { id: 8, code: "CAP 490", name: "Senior Capstone Project", credits: 5, group: "Capstone", done: false }
+];
+
+var sportOptions = [
+  "Table Tennis",
+  "Basketball",
+  "New Sports",
+  "Softball",
+  "Fitness",
+  "Fitness Training"
+];
+
+var selectedSport = "";
+
+function setSport(sport) {
+  selectedSport = sport;
+}
+
+var careerGoals = [
+  "mechanical",
+  "electrical",
+  "civil",
+  "computer",
+  "chemical"
+];
+
+var electiveCourses = [
+  {
+    code: "ME 210",
+    name: "Statics and Dynamics",
+    credits: 4,
+    tags: ["mechanical", "civil"],
+    why: "Core to understanding forces on structures and machines."
+  },
+  {
+    code: "ME 320",
+    name: "Thermodynamics",
+    credits: 4,
+    tags: ["mechanical", "chemical"],
+    why: "Needed for engines, HVAC, and energy systems."
+  },
+  {
+    code: "ME 350",
+    name: "Machine Design",
+    credits: 3,
+    tags: ["mechanical"],
+    why: "Teaches how to design real mechanical parts."
+  },
+  {
+    code: "EE 210",
+    name: "Circuit Analysis",
+    credits: 4,
+    tags: ["electrical", "computer"],
+    why: "The foundation for anything with circuits."
+  },
+  {
+    code: "EE 330",
+    name: "Signals and Systems",
+    credits: 3,
+    tags: ["electrical"],
+    why: "Used in communications, audio, and controls."
+  },
+  {
+    code: "EE 340",
+    name: "Electromagnetics",
+    credits: 3,
+    tags: ["electrical"],
+    why: "Explains how antennas, motors, and sensors work."
+  },
+  {
+    code: "CE 220",
+    name: "Structural Analysis",
+    credits: 4,
+    tags: ["civil"],
+    why: "Needed to design buildings and bridges safely."
+  },
+  {
+    code: "CE 250",
+    name: "Fluid Mechanics",
+    credits: 3,
+    tags: ["civil", "mechanical"],
+    why: "Used in water systems, HVAC, and hydraulics."
+  },
+  {
+    code: "CE 310",
+    name: "Geotechnical Engineering",
+    credits: 3,
+    tags: ["civil"],
+    why: "Covers how soil and foundations behave."
+  },
+  {
+    code: "CS 215",
+    name: "Data Structures and Algorithms",
+    credits: 4,
+    tags: ["computer"],
+    why: "Needed for almost every software engineering job."
+  },
+  {
+    code: "CS 330",
+    name: "Computer Architecture",
+    credits: 3,
+    tags: ["computer", "electrical"],
+    why: "Connects hardware and software together."
+  },
+  {
+    code: "CS 355",
+    name: "Embedded Systems",
+    credits: 3,
+    tags: ["computer", "electrical"],
+    why: "Useful for robotics and hardware projects."
+  },
+  {
+    code: "CHE 210",
+    name: "Chemical Process Principles",
+    credits: 4,
+    tags: ["chemical"],
+    why: "The starting point for most chemical engineering work."
+  },
+  {
+    code: "CHE 310",
+    name: "Reaction Engineering",
+    credits: 3,
+    tags: ["chemical"],
+    why: "Explains how chemical reactions are scaled up safely."
+  },
+  {
+    code: "CHE 330",
+    name: "Heat and Mass Transfer",
+    credits: 3,
+    tags: ["chemical", "mechanical"],
+    why: "Common ground between chemical and mechanical engineering."
+  }
+];
+
+var currentGoal = "undecided";
+
+function calculateTotalCredits() {
+  var total = 0;
+
+  for (var i = 0; i < mandatoryCourses.length; i++) {
+    total = total + mandatoryCourses[i].credits;
+  }
+
+  return total;
+}
+
+function calculateDoneCredits() {
+  var done = 0;
+
+  for (var i = 0; i < mandatoryCourses.length; i++) {
+    if (mandatoryCourses[i].done) {
+      done = done + mandatoryCourses[i].credits;
+    }
+  }
+
+  return done;
+}
+
+function updateProgressBar() {
+  var total = calculateTotalCredits();
+  var done = calculateDoneCredits();
+  var percent = Math.round((done / total) * 100);
+
+  document.getElementById("creditsDone").innerHTML = done;
+  document.getElementById("creditsTotal").innerHTML = total;
+  document.getElementById("progressBarInside").style.width = percent + "%";
+  document.getElementById("progressBarInside").innerHTML = percent + "%";
+}
+
+function toggleCourse(courseId) {
+  for (var i = 0; i < mandatoryCourses.length; i++) {
+    if (mandatoryCourses[i].id === courseId) {
+      mandatoryCourses[i].done = !mandatoryCourses[i].done;
+    }
+  }
+
+  drawCourseList();
+  updateProgressBar();
+}
+
+function drawCourseList() {
+  var listDiv = document.getElementById("courseListDiv");
+  listDiv.innerHTML = "";
+
+  var groupNames = [];
+
+  for (var i = 0; i < mandatoryCourses.length; i++) {
+    if (groupNames.indexOf(mandatoryCourses[i].group) === -1) {
+      groupNames.push(mandatoryCourses[i].group);
+    }
+  }
+
+  for (var g = 0; g < groupNames.length; g++) {
+    var groupName = groupNames[g];
+
+    var heading = document.createElement("h3");
+    heading.innerHTML = groupName;
+    listDiv.appendChild(heading);
+
+    for (var i = 0; i < mandatoryCourses.length; i++) {
+      var course = mandatoryCourses[i];
+
+      if (course.group === groupName) {
+        var div = document.createElement("div");
+        div.className = "course";
+
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = course.done;
+
+        checkbox.onclick = (function(id) {
+          return function() {
+            toggleCourse(id);
+          };
+        })(course.id);
+
+        div.appendChild(checkbox);
+
+        var label = document.createElement("span");
+
+        label.innerHTML =
+          " " +
+          course.name +
+          " <span class='credits'>(" +
+          course.credits +
+          " credits)</span>";
+
+        div.appendChild(label);
+
+        if (course.hasDropdown) {
+          var selectBox = document.createElement("select");
+
+          var blankOption = document.createElement("option");
+          blankOption.value = "";
+          blankOption.innerHTML = "-- choose a sport --";
+
+          selectBox.appendChild(blankOption);
+
+          for (var s = 0; s < sportOptions.length; s++) {
+            var option = document.createElement("option");
+
+            option.value = sportOptions[s];
+            option.innerHTML = sportOptions[s];
+
+            if (sportOptions[s] === selectedSport) {
+              option.selected = true;
+            }
+
+            selectBox.appendChild(option);
+          }
+
+          selectBox.onchange = function() {
+            setSport(this.value);
+          };
+
+          div.appendChild(selectBox);
+        }
+
+        listDiv.appendChild(div);
+      }
+    }
+  }
+}
+
+function setGoal(goal) {
+  currentGoal = goal;
+  drawGoalButtons();
+  drawElectiveList();
+}
+
+function drawGoalButtons() {
+  var buttonsDiv = document.getElementById("goalButtonsDiv");
+  buttonsDiv.innerHTML = "";
+
+  for (var i = 0; i < careerGoals.length; i++) {
+    var goal = careerGoals[i];
+
+    var button = document.createElement("button");
+    button.innerHTML = goal;
+
+    if (goal === currentGoal) {
+      button.className = "selectedButton";
+    }
+
+    button.onclick = (function(g) {
+      return function() {
+        setGoal(g);
+      };
+    })(goal);
+
+    buttonsDiv.appendChild(button);
+  }
+}
+
+function drawElectiveList() {
+  var listDiv = document.getElementById("electiveListDiv");
+  listDiv.innerHTML = "";
+
+  var matching = [];
+  var notMatching = [];
+
+  for (var i = 0; i < electiveCourses.length; i++) {
+    var course = electiveCourses[i];
+
+    if (course.tags.indexOf(currentGoal) !== -1) {
+      matching.push(course);
+    } else {
+      notMatching.push(course);
+    }
+  }
+
+  var sortedList = matching.concat(notMatching);
+
+  for (var i = 0; i < sortedList.length; i++) {
+    var course = sortedList[i];
+
+    var div = document.createElement("div");
+    div.className = "course";
+
+    if (course.tags.indexOf(currentGoal) !== -1) {
+      div.className += " recommended";
+    }
+
+    var recommendedText = "";
+
+    if (course.tags.indexOf(currentGoal) !== -1) {
+      recommendedText = " <b>(recommended for you)</b>";
+    }
+
+    div.innerHTML =
+      course.name +
+      " <span class='credits'>(" +
+      course.credits +
+      " credits)</span>" +
+      recommendedText +
+      "<br>123";
+
+    listDiv.appendChild(div);
+  }
+}
+
+function submitForm() {
+  var done = calculateDoneCredits();
+  var total = calculateTotalCredits();
+
+  var message =
+    "You have completed " +
+    done +
+    " out of " +
+    total +
+    " mandatory credits.";
+
+  if (selectedSport !== "") {
+    message =
+      message +
+      " Sport chosen: " +
+      selectedSport +
+      ".";
+  } else {
+    message =
+      message +
+      " No sport chosen yet.";
+  }
+
+  message =
+    message +
+    " Career goal: " +
+    currentGoal +
+    ".";
+
+  document.getElementById("submitMessage").innerHTML = message;
+}
+
+drawCourseList();
+updateProgressBar();
+drawGoalButtons();
+drawElectiveList();
+
+</script>
+
+</body>
+
+</html>

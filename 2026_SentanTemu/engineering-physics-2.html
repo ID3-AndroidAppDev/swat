@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP2 — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --green-deep:#17965d;
+    --green-mid:#3f8a63;
+    --lime:#8dc63f;
+    --link-blue:#3b5fe0;
+    --ink:#1b241f;
+    --ink-soft:#5b6862;
+    --bg:#fbfcfa;
+    --card-bg:#ffffff;
+    --radius-lg:22px;
+    --primary-green:#0e955a;
+    --secondary-green:#90c41f;
+    --text-dark:#222;
+  }
+
+  *{
+    box-sizing:border-box;
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+  }
+
+  h1,h3{
+    font-family:'Poppins',sans-serif;
+  }
+
+  img{
+    display:block;
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 25px;
+    background:white;
+    border-bottom:4px solid var(--secondary-green);
+  }
+
+  header h1{
+    flex:1;
+    text-align:center;
+    color:var(--primary-green);
+    font-size:2.2rem;
+    font-weight:bold;
+    margin:0;
+  }
+
+  .logo{
+    width:auto;
+    height:auto;
+    max-height:55px;
+  }
+
+  .menu-btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:12px;
+    background:var(--primary-green);
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+    transition:0.2s ease;
+  }
+
+  .menu-btn:hover{
+    background:var(--secondary-green);
+  }
+
+  .nav-sidebar{
+    position:fixed;
+    top:0;
+    right:-300px;
+    width:300px;
+    height:100vh;
+    background:white;
+    border-left:4px solid var(--primary-green);
+    padding:20px;
+    transition:right 0.3s ease;
+    z-index:1000;
+    box-shadow:-2px 0 15px rgba(0,0,0,0.2);
+    overflow-y:auto;
+  }
+
+  .nav-sidebar.active{
+    right:0;
+  }
+
+  .nav-sidebar h3{
+    margin-top:25px;
+    margin-bottom:10px;
+    color:var(--primary-green);
+    border-bottom:2px solid var(--secondary-green);
+    padding-bottom:5px;
+  }
+
+  .nav-sidebar a{
+    display:block;
+    text-decoration:none;
+    color:var(--text-dark);
+    padding:10px;
+    margin-bottom:5px;
+    border-radius:8px;
+  }
+
+  .nav-sidebar a:hover{
+    background:var(--secondary-green);
+    color:white;
+  }
+
+  .close-btn{
+    border:none;
+    background:none;
+    font-size:1.5rem;
+    cursor:pointer;
+    color:var(--primary-green);
+    margin-bottom:10px;
+  }
+
+  .app{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    min-height:calc(100vh - 94px);
+  }
+
+  .sidebar{
+    padding:32px 20px;
+    border-right:1px solid #eef1ec;
+  }
+
+  .nav-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 10px;
+    border-radius:12px;
+    color:var(--green-deep);
+    font-weight:600;
+    text-decoration:none;
+  }
+
+  .nav-item:hover{
+    background:#eef7ee;
+  }
+
+  .nav-item img{
+    width:22px;
+    height:22px;
+  }
+
+  .schedule-card{
+    margin-top:48px;
+    border:2px solid var(--green-deep);
+    border-radius:var(--radius-lg);
+    padding:18px 16px;
+  }
+
+  .schedule-list{
+    list-style:none;
+    margin:0 0 12px;
+    padding:0;
+  }
+
+  .schedule-list li{
+    margin-bottom:2px;
+    font-size:.85rem;
+  }
+
+  .schedule-num{
+    font-weight:700;
+    color:var(--green-mid);
+  }
+
+  .schedule-list b{
+    font-size:.88rem;
+    font-weight:600;
+  }
+
+  .schedule-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px;
+    margin:0 -8px;
+    border-radius:8px;
+    text-decoration:none;
+    color:inherit;
+  }
+
+  .schedule-link:hover{
+    background:#eef7ee;
+  }
+
+  .schedule-link.active{
+    background:#eef7ee;
+  }
+
+  .view-link{
+    color:var(--link-blue);
+    font-weight:600;
+    font-size:.85rem;
+    text-decoration:none;
+  }
+
+  .view-link:hover{
+    text-decoration:underline;
+  }
+
+  .main{
+    padding:32px 40px 48px;
+  }
+
+  .icon{
+    position:relative;
+    background:linear-gradient(135deg,var(--green-mid),var(--green-deep));
+    border-radius:var(--radius-lg);
+    padding:34px 40px;
+    color:#fff;
+    overflow:hidden;
+  }
+
+  .icon h1{
+    margin:0 0 14px;
+    font-size:2rem;
+  }
+
+  .icon-details{
+    display:flex;
+    gap:26px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+  }
+
+  .icon-img{
+    position:absolute;
+    right:28px;
+    top:50%;
+    transform:translateY(-50%);
+    width:200px;
+    height:200px;
+    object-fit:contain;
+  }
+
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    margin-top:26px;
+  }
+
+  .stat-card{
+    border:2px solid var(--lime);
+    border-radius:var(--radius-lg);
+    background:var(--card-bg);
+    padding:22px 20px;
+    text-align:center;
+  }
+
+  .stat-card h3{
+    margin:0 0 12px;
+    font-size:1.15rem;
+  }
+
+  .stat-card img{
+    width:40px;
+    height:40px;
+    margin:0 auto 8px;
+  }
+
+  .stat-value{
+    font-size:2rem;
+    font-weight:800;
+  }
+
+  .stat-label{
+    color:var(--ink-soft);
+    font-size:.85rem;
+    margin:2px 0 10px;
+  }
+
+  .lower-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:22px;
+    margin-top:22px;
+  }
+
+  .panel{
+    border:2px solid var(--lime);
+    border-radius:var(--radius-lg);
+    background:var(--card-bg);
+    padding:22px 26px;
+  }
+
+  .announce-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.2rem;
+    font-weight:700;
+    margin-bottom:16px;
+  }
+
+  .announce-title img{
+    width:24px;
+    height:24px;
+  }
+
+  .announce-item{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    padding:12px 0;
+    border-top:1px solid #eef1ec;
+  }
+
+  .announce-item:first-of-type{
+    border-top:none;
+  }
+
+  .announce-item b{
+    display:block;
+  }
+
+  .announce-item p{
+    margin:2px 0 0;
+    color:var(--ink-soft);
+    font-size:.88rem;
+  }
+
+  .announce-date{
+    text-align:right;
+    color:var(--ink-soft);
+    font-size:.85rem;
+    white-space:nowrap;
+  }
+
+  .progress-panel{
+    text-align:center;
+  }
+
+  .progress-panel img{
+    width:48px;
+    height:48px;
+    margin:0 auto 6px;
+  }
+
+  .progress-value{
+    font-size:2rem;
+    font-weight:800;
+  }
+
+  .progress-week{
+    color:var(--ink-soft);
+    font-size:.85rem;
+    margin:2px 0 12px;
+  }
+
+  @media (max-width:1000px){
+    .app{
+      grid-template-columns:1fr;
+    }
+
+    .sidebar{
+      border-right:none;
+      border-bottom:1px solid #eef1ec;
+    }
+
+    .stats-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .lower-grid{
+      grid-template-columns:1fr;
+    }
+
+    .icon{
+      display:none;
+    }
+  }
+
+  @media (max-width:600px){
+    header{
+      padding:12px 16px;
+    }
+
+    header h1{
+      font-size:1.6rem;
+    }
+
+    .logo{
+      max-width:120px;
+    }
+
+    .menu-btn{
+      width:50px;
+      height:50px;
+      font-size:1.6rem;
+    }
+
+    .main{
+      padding:24px 18px 40px;
+    }
+
+    .stats-grid{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="homepage.html">
+    <img
+      class="logo"
+      src="https://www.kuas.ac.jp/wp-content/themes/kuasuni-theme/build/images/kuasuni-logo-sm.png"
+      alt="KUAS Logo">
+  </a>
+
+  <h1>KUAS ナビ</h1>
+
+  <button class="menu-btn">☰</button>
+</header>
+
+<div id="nav-sidebar" class="nav-sidebar">
+
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+
+  <h3>Academic</h3>
+  <a href="ID3-Calendar.html">Schedule</a>
+  <a href="#">Attendance</a>
+  <a href="calculus-linear-algebra.html">Class Profile</a>
+
+  <h3>Student Services</h3>
+  <a href="registration.html">Registration</a>
+  <a href="ID3-QnA.html">Q&amp;A</a>
+  <a href="#">Notices</a>
+
+  <h3>Communication</h3>
+  <a href="#">Sentan Mail</a>
+  <a href="#">Announcements</a>
+
+  <h3>Settings</h3>
+  <a href="#">Preferences</a>
+
+</div>
+
+<div class="app">
+
+  <aside class="sidebar">
+
+    <a class="nav-item" href="#">
+      <img src="https://i.ibb.co/B52rXLsW/home.png" alt="">
+      Dashboard
+    </a>
+
+    <a class="nav-item" href="#">
+      <img src="https://i.ibb.co/FkW8VzgF/assignments.png" alt="">
+      Assignments
+    </a>
+
+    <a class="nav-item" href="#">
+      <img src="https://i.ibb.co/TqrkTj12/material.png" alt="">
+      Materials
+    </a>
+
+    <a class="nav-item" href="#">
+      <img src="https://i.ibb.co/1GfKKZMc/tests.png" alt="">
+      Tests
+    </a>
+
+    <a class="nav-item" href="#">
+      <img src="https://i.ibb.co/Fkx3ct6X/grades.png" alt="">
+      Grades
+    </a>
+
+    <a class="nav-item" href="ID3-QnA.html">
+      <img src="https://i.ibb.co/7xZK7PLt/Q-A.png" alt="">
+      Q&amp;A
+    </a>
+
+    <div class="schedule-card">
+
+      <h3>Registered Classes</h3>
+
+      <ul class="schedule-list">
+
+        <li>
+          <a class="schedule-link" href="introduction-to-design.html">
+            <span class="schedule-num">1</span>
+            <span><b>Introduction to Design</b></span>
+          </a>
+        </li>
+
+        <li>
+          <a class="schedule-link" href="calculus-linear-algebra.html">
+            <span class="schedule-num">2</span>
+            <span><b>Calculus and Linear...</b></span>
+          </a>
+        </li>
+
+        <li>
+          <a class="schedule-link active" href="engineering-physics-2.html">
+            <span class="schedule-num">3</span>
+            <span><b>Engineering Physics 2</b></span>
+          </a>
+        </li>
+
+        <li>
+          <a class="schedule-link" href="elementary-japanese-3.html">
+            <span class="schedule-num">4</span>
+            <span><b>Elementary Japanese 3</b></span>
+          </a>
+        </li>
+
+        <li>
+          <a class="schedule-link" href="algorithmic-thinking-and-programming.html">
+            <span class="schedule-num">5</span>
+            <span><b>Algorithmic Thinking...</b></span>
+          </a>
+        </li>
+
+        <li>
+          <a class="schedule-link" href="sls-3.html">
+            <span class="schedule-num">6</span>
+            <span><b>SLS III</b></span>
+          </a>
+        </li>
+
+        <li>
+          <a class="schedule-link" href="fundamentals-of-mechanics.html">
+            <span class="schedule-num">7</span>
+            <span><b>Fundamentals of...</b></span>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </aside>
+
+  <main class="main">
+
+    <section class="icon">
+
+      <h1>Engineering Physics 2</h1>
+
+      <div class="icon-details">
+        <span>JM0000201</span>
+        <span>6 Credits</span>
+        <span>English</span>
+      </div>
+
+      <div>
+        Instructors: HORII Shigeru, IMAI Tadayuki
+      </div>
+
+      <img
+        class="icon-img"
+        src="https://i.ibb.co/PGvMSyFm/icon.png"
+        alt="Course illustration">
+
+    </section>
+
+    <section class="stats-grid">
+
+      <div class="stat-card">
+        <h3>Assignments</h3>
+
+        <img
+          src="https://i.ibb.co/FkW8VzgF/assignment.png"
+          alt="">
+
+        <div class="stat-value">2</div>
+
+        <div class="stat-label">
+          Pending
+        </div>
+
+        <a class="view-link" href="#">
+          View All &gt;
+        </a>
+      </div>
+
+      <div class="stat-card">
+        <h3>Materials</h3>
+
+        <img
+          src="https://i.ibb.co/TqrkTj12/material.png"
+          alt="">
+
+        <div class="stat-value">3</div>
+
+        <div class="stat-label">
+          Files
+        </div>
+
+        <a class="view-link" href="#">
+          View All &gt;
+        </a>
+      </div>
+
+      <div class="stat-card">
+        <h3>Grades</h3>
+
+        <img
+          src="https://i.ibb.co/Fkx3ct6X/grades.png"
+          alt="">
+
+        <div class="stat-value">
+          68
+          <span style="font-size:1.1rem;color:var(--ink-soft);">
+            /100
+          </span>
+        </div>
+
+        <div class="stat-label" style="visibility:hidden;">
+          .
+        </div>
+
+        <a class="view-link" href="#">
+          View Details &gt;
+        </a>
+      </div>
+
+      <div class="stat-card">
+        <h3>Q&amp;A</h3>
+
+        <img
+          src="https://i.ibb.co/7xZK7PLt/q-a.png"
+          alt="">
+
+        <div class="stat-value">
+          19
+        </div>
+
+        <div class="stat-label">
+          Inquiries
+        </div>
+
+        <a class="view-link" href="ID3-QnA.html">
+          View Details &gt;
+        </a>
+      </div>
+
+    </section>
+
+    <section class="lower-grid">
+
+      <div class="panel">
+
+        <div class="announce-title">
+
+          <img
+            src="https://i.ibb.co/hxmwr454/announcement.png"
+            alt="">
+
+          Announcements
+
+        </div>
+
+        <div class="announce-item">
+
+          <div>
+            <b>Week 16 Slides Uploaded</b>
+            <p>"Week 16 Lecture Slides" added to Materials</p>
+          </div>
+
+          <div class="announce-date">
+            Jul 24 2026<br>
+            10:34am
+          </div>
+
+        </div>
+
+        <div class="announce-item">
+
+          <div>
+            <b>Quiz 3 Grades Released</b>
+            <p>"Quiz 3 Scores" added to Grades</p>
+          </div>
+
+          <div class="announce-date">
+            Jul 23 2026<br>
+            13:51am
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="panel progress-panel">
+
+        <h3>Course Progress</h3>
+
+        <img
+          src="https://i.ibb.co/JR33Z4sZ/progress.png"
+          alt="">
+
+        <div class="progress-value">
+          23%
+        </div>
+
+        <div class="progress-week">
+          W4
+        </div>
+
+        <a class="view-link" href="#">
+          View Details &gt;
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+  const menuBtn = document.querySelector(".menu-btn");
+  const navSidebar = document.getElementById("nav-sidebar");
+
+  window.toggleMenu = function(){
+    navSidebar.classList.toggle("active");
+  };
+
+  menuBtn.addEventListener("click", toggleMenu);
+</script>
+
+</body>
+</html>

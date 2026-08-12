@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sentan Navi - Q&A</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background: white;
+      border-bottom: 4px solid #90c41f;
+      margin: -20px -20px 20px -20px;
+    }
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+      color: #0e955a;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .logo {
+      width: auto;
+      height: auto;
+      max-height: 55px;
+    }
+
+    .logo-link {
+      display: block;
+    }
+
+    .menu-btn {
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 12px;
+      background: #0e955a;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-btn:hover {
+      background: #90c41f;
+    }
+
+    .nav-sidebar {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: white;
+      border-left: 4px solid #0e955a;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    .nav-sidebar.active {
+      right: 0;
+    }
+
+    .nav-sidebar h3 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #0e955a;
+      border-bottom: 2px solid #90c41f;
+      padding-bottom: 5px;
+    }
+
+    .nav-sidebar a {
+      display: block;
+      text-decoration: none;
+      color: #222;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+    }
+
+    .nav-sidebar a:hover {
+      background: #90c41f;
+      color: white;
+    }
+
+    .close-btn {
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #0e955a;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .box {
+      background-color: white;
+      border: 1px solid #f4f4f4;
+      border-radius: 6px;
+      padding: 20px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .box h1 {
+      font-size: 18px;
+      color: #0e995a;
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #0e995a;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #f4f4f4;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    button[type="submit"] {
+      background-color: #0e995a;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #90c41f;
+    }
+
+    #confirmMsg {
+      display: none;
+      background-color: #90c41f;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .question {
+      border-bottom: 1px solid #f4f4f4;
+      padding: 12px 0;
+    }
+
+    .question:last-child {
+      border-bottom: none;
+    }
+
+    .answered {
+      color: #48604d;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .pending {
+      color: #a67c1e;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 12px 16px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .logo {
+        max-width: 120px;
+      }
+
+      .menu-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <a href="homepage.html" class="logo-link">
+    <img
+      class="logo"
+      src="https://www.kuas.ac.jp/wp-content/themes/kuasuni-theme/build/images/kuasuni-logo-sm.png"
+      alt="KUAS Logo">
+  </a>
+
+  <h1>KUAS ナビ</h1>
+
+  <button class="menu-btn" type="button">☰</button>
+
+</header>
+
+<div id="nav-sidebar" class="nav-sidebar">
+
+  <button class="close-btn" type="button" onclick="toggleMenu()">✕</button>
+
+  <h3>Academic</h3>
+  <a href="ID3-Calendar.html">Schedule</a>
+  <a href="#">Attendance</a>
+  <a href="calculus-linear-algebra.html">Class Profile</a>
+
+  <h3>Student Services</h3>
+  <a href="registration.html">Registration</a>
+  <a href="ID3-QnA.html">Q&amp;A</a>
+  <a href="#">Notices</a>
+
+  <h3>Communication</h3>
+  <a href="#">Sentan Mail</a>
+  <a href="#">Announcements</a>
+
+  <h3>Settings</h3>
+  <a href="#">Preferences</a>
+
+</div>
+
+<div class="box">
+
+  <h1>Ask a Question</h1>
+
+  <form id="qaForm">
+
+    <label>Send to:</label>
+
+    <select>
+      <option>Student Affairs Center</option>
+      <option>Financial Affairs Division</option>
+      <option>Academic Office</option>
+    </select>
+
+    <label>Subject:</label>
+
+    <input type="text" required>
+
+    <label>Message:</label>
+
+    <textarea rows="4" required></textarea>
+
+    <button type="submit">Send</button>
+
+    <div id="confirmMsg">
+      Your question has been sent!
+    </div>
+
+  </form>
+
+</div>
+
+<div class="box">
+
+  <h1>Your Questions</h1>
+
+  <div class="question">
+    <strong>Certificate of payment fee</strong>
+    <p class="answered">Answered</p>
+    <p>Financial Affairs Division - Jul 20, 2026</p>
+  </div>
+
+  <div class="question">
+    <strong>Lost student ID</strong>
+    <p class="pending">Pending</p>
+    <p>Student Affairs Center - Jul 22, 2026</p>
+  </div>
+
+</div>
+
+<script>
+  const menuBtn = document.querySelector(".menu-btn");
+  const navSidebar = document.getElementById("nav-sidebar");
+
+  window.toggleMenu = function () {
+    navSidebar.classList.toggle("active");
+  };
+
+  menuBtn.addEventListener("click", toggleMenu);
+
+  const form = document.getElementById("qaForm");
+  const confirmMsg = document.getElementById("confirmMsg");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    confirmMsg.style.display = "block";
+    form.reset();
+
+    setTimeout(function () {
+      confirmMsg.style.display = "none";
+    }, 4000);
+  });
+</script>
+
+</body>
+
+</html>
+```

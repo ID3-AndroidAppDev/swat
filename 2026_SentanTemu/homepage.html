@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KUAS Navi</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f7;
+    padding: 20px;
+    color: #222;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: white;
+    border-bottom: 4px solid #90c41f;
+    margin: -20px -20px 20px -20px;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    color: #0e955a;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    max-height: 55px;
+}
+
+.logo-link {
+    display: block;
+}
+
+.menu-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: #0e955a;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-btn:hover {
+    background: #90c41f;
+}
+
+.nav-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    border-left: 4px solid #0e955a;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.nav-sidebar.active {
+    right: 0;
+}
+
+.nav-sidebar h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #0e955a;
+    border-bottom: 2px solid #90c41f;
+    padding-bottom: 5px;
+}
+
+.nav-sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.nav-sidebar a:hover {
+    background: #90c41f;
+    color: white;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #0e955a;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.schedule {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.schedule h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrow-btn {
+    border: none;
+    background: #1e3a8a;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1);
+    background: #0e995a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 14px 10px;
+    font-size: 1.05rem;
+}
+
+td:first-child {
+    width: 160px;
+    font-weight: bold;
+    color: #555;
+}
+
+.dashboard-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.dashboard-item {
+    text-decoration: none;
+    color: #222;
+    background: white;
+    border: 2px solid #1e3a8a;
+    border-radius: 15px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 120px;
+    cursor: pointer;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s,
+        color 0.2s;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: #1e3a8a;
+    color: white;
+}
+
+.icon {
+    font-size: 2.2rem;
+    transition: transform 0.2s;
+}
+
+.dashboard-item:hover .icon {
+    transform: scale(1.15);
+}
+
+.dashboard-item span:last-child {
+    font-weight: bold;
+}
+
+.email-block {
+    background: white;
+    border: 3px solid #1e3a8a;
+    border-radius: 12px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.email-header {
+    border-bottom: 3px solid #1e3a8a;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1e3a8a;
+}
+
+.email-content {
+    padding: 15px;
+}
+
+.email {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.email:hover {
+    background: #f0f5ff;
+}
+
+.email-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.email-preview {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .email-block {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 12px 16px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .menu-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    td {
+        font-size: 0.9rem;
+    }
+
+    td:first-child {
+        width: 110px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+    <a href="homepage" class="logo-link">
+        <img
+            class="logo"
+            src="https://www.kuas.ac.jp/wp-content/themes/kuasuni-theme/build/images/kuasuni-logo-sm.png"
+            alt="KUAS Logo">
+    </a>
+
+    <h1>KUAS ナビ</h1>
+
+    <button class="menu-btn" id="menuButton" type="button">☰</button>
+
+</header>
+
+<section class="schedule">
+
+    <h2>
+        <span id="dayTitle">Monday Schedule</span>
+
+        <span class="arrows">
+            <button class="arrow-btn" id="previousDay">◀</button>
+            <button class="arrow-btn" id="nextDay">▶</button>
+        </span>
+    </h2>
+
+    <table id="scheduleTable">
+        <tr>
+            <td>9:00–10:30</td>
+            <td>Introduction to Design</td>
+        </tr>
+
+        <tr>
+            <td>10:40–12:10</td>
+            <td>ID cont.</td>
+        </tr>
+
+        <tr>
+            <td>13:00–14:30</td>
+            <td>Calculus & Linear Algebra 2</td>
+        </tr>
+
+        <tr>
+            <td>14:40–16:10</td>
+            <td>Engineering Physics 2</td>
+        </tr>
+
+        <tr>
+            <td>16:20–17:50</td>
+            <td>Elementary Japanese 3</td>
+        </tr>
+    </table>
+
+    <div class="dashboard-grid">
+
+        <a href="#" class="dashboard-item" data-page="Notice">
+            <span class="icon">📢</span>
+            <span>Notice</span>
+        </a>
+
+        <a href="ID3-Calendar.html" class="dashboard-item" data-page="Schedule">
+            <span class="icon">📅</span>
+            <span>Schedule</span>
+        </a>
+
+        <a href="ID3-QnA.html" class="dashboard-item" data-page="Q&A">
+            <span class="icon">❓</span>
+            <span>Q&A</span>
+        </a>
+
+        <a href="registration.html" class="dashboard-item" data-page="Registration">
+            <span class="icon">📝</span>
+            <span>Registration</span>
+        </a>
+
+        <a href="calculus-linear-algebra.html" class="dashboard-item" data-page="Class Profile">
+            <span class="icon">👨‍🏫</span>
+            <span>Class Profile</span>
+        </a>
+
+        <a href="#" class="dashboard-item" data-page="Attendance">
+            <span class="icon">✅</span>
+            <span>Attendance</span>
+        </a>
+
+    </div>
+
+</section>
+
+<aside class="email-block">
+
+    <div class="email-header">
+        Sentan Email Block
+    </div>
+
+    <div class="email-content">
+
+        <div class="email">
+            <div class="email-title">📢 Important Notice</div>
+            <div class="email-preview">
+                Please check the latest university announcements.
+            </div>
+        </div>
+
+        <div class="email">
+            <div class="email-title">📚 Engineering Physics 2</div>
+            <div class="email-preview">
+                New material has been uploaded.
+            </div>
+        </div>
+
+        <div class="email">
+            <div class="email-title">📅 Schedule Update</div>
+            <div class="email-preview">
+                Your class schedule has been updated.
+            </div>
+        </div>
+
+    </div>
+
+</aside>
+
+</div>
+
+<div id="nav-sidebar" class="nav-sidebar">
+
+    <button class="close-btn" type="button" id="closeMenu">✕</button>
+
+    <h3>Academic</h3>
+    <a href="ID3-Calendar.html">Schedule</a>
+    <a href="#">Attendance</a>
+    <a href="calculus-and-linear-algebra.html">Class Profile</a>
+
+    <h3>Student Services</h3>
+    <a href="registration.html">Registration</a>
+    <a href="ID3-QnA.html">Q&amp;A</a>
+    <a href="#">Notices</a>
+
+    <h3>Communication</h3>
+    <a href="#">Sentan Mail</a>
+    <a href="#">Announcements</a>
+
+    <h3>Settings</h3>
+    <a href="#">Preferences</a>
+
+</div>
+
+<script>
+const menuButton = document.getElementById("menuButton");
+const navSidebar = document.getElementById("nav-sidebar");
+const closeMenu = document.getElementById("closeMenu");
+
+function toggleMenu() {
+    navSidebar.classList.toggle("active");
+}
+
+menuButton.addEventListener("click", toggleMenu);
+closeMenu.addEventListener("click", toggleMenu);
+
+const days = [
+    {
+        name: "Monday",
+        classes: [
+            ["9:00–10:30", "Introduction to Design"],
+            ["10:40–12:10", "ID cont."],
+            ["13:00–14:30", "Calculus & Linear Algebra 2"],
+            ["14:40–16:10", "Engineering Physics 2"],
+            ["16:20–17:50", "Elementary Japanese 3"]
+        ]
+    },
+
+    {
+        name: "Tuesday",
+        classes: [
+            ["9:00–10:30", "Engineering Mathematics"],
+            ["10:40–12:10", "Programming"],
+            ["13:00–14:30", "Physics"],
+            ["14:40–16:10", "Free"],
+            ["16:20–17:50", "Japanese"]
+        ]
+    },
+
+    {
+        name: "Wednesday",
+        classes: [
+            ["9:00–10:30", "Design"],
+            ["10:40–12:10", "Programming"],
+            ["13:00–14:30", "Calculus"],
+            ["14:40–16:10", "Engineering Physics"],
+            ["16:20–17:50", "Free"]
+        ]
+    },
+
+    {
+        name: "Thursday",
+        classes: [
+            ["9:00–10:30", "Free"],
+            ["10:40–12:10", "Mathematics"],
+            ["13:00–14:30", "Programming"],
+            ["14:40–16:10", "Physics"],
+            ["16:20–17:50", "Japanese"]
+        ]
+    },
+
+    {
+        name: "Friday",
+        classes: [
+            ["9:00–10:30", "Engineering Design"],
+            ["10:40–12:10", "Calculus"],
+            ["13:00–14:30", "Physics"],
+            ["14:40–16:10", "Free"],
+            ["16:20–17:50", "Free"]
+        ]
+    }
+];
+
+let currentDay = 0;
+
+const dayTitle = document.getElementById("dayTitle");
+const scheduleTable = document.getElementById("scheduleTable");
+
+function updateSchedule() {
+    const day = days[currentDay];
+
+    dayTitle.textContent = day.name + " Schedule";
+
+    scheduleTable.innerHTML = "";
+
+    day.classes.forEach(function(classInfo) {
+        const row = document.createElement("tr");
+
+        const time = document.createElement("td");
+        const subject = document.createElement("td");
+
+        time.textContent = classInfo[0];
+        subject.textContent = classInfo[1];
+
+        row.appendChild(time);
+        row.appendChild(subject);
+
+        scheduleTable.appendChild(row);
+    });
+}
+
+document.getElementById("previousDay").addEventListener("click", function() {
+    currentDay--;
+
+    if (currentDay < 0) {
+        currentDay = days.length - 1;
+    }
+
+    updateSchedule();
+});
+
+document.getElementById("nextDay").addEventListener("click", function() {
+    currentDay++;
+
+    if (currentDay >= days.length) {
+        currentDay = 0;
+    }
+
+    updateSchedule();
+});
+
+document.querySelectorAll(".dashboard-item").forEach(function(item) {
+    if (item.getAttribute("href") === "#") {
+        item.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const page = item.dataset.page;
+
+            showMessage(page);
+        });
+    }
+});
+
+function showMessage(page) {
+    alert(page + " page clicked!");
+}
+
+document.querySelectorAll(".email").forEach(function(email) {
+    email.addEventListener("click", function() {
+        const title = email.querySelector(".email-title").textContent;
+
+        alert("Opening: " + title);
+    });
+});
+</script>
+
+</body>
+</html>
