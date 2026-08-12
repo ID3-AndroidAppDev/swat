@@ -16,6 +16,7 @@ This repo archives selected final projects from S.W.A.T teams in the course "Int
 * Education
   - [KotobaDrop](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_KotobaDrop)
   - [Ankers](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_Ankers)
+  - [SentanTemu](https://github.com/ID3-AndroidAppDev/swat/tree/main/2026_SentanTemu)
  
 * Utilities
   - [SportsTimer](https://github.com/ID3-finalProject-archive/swat/tree/main/2020_SportsTimer)
