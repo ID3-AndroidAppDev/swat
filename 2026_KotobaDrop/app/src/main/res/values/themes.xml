@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Pure Compose app: this theme only styles the brief pre-Compose window (background,
+         status bar icon contrast) before KotobaDropTheme takes over. Parent must be a
+         Theme.AppCompat descendant — MainActivity extends AppCompatActivity solely so
+         AppCompatDelegate.setApplicationLocales() (per-app language, §9) actually applies. -->
+    <style name="Theme.KotobaDrop" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/kinari</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

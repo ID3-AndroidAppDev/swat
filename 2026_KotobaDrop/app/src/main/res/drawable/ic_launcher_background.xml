@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Horizontal gradient sampled from the source artwork (left #67B0C1 to right #2D4F72),
+     full bleed so any launcher mask (circle/squircle/rounded square) crops it cleanly. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:type="linear"
+        android:angle="0"
+        android:startColor="#67B0C1"
+        android:endColor="#2D4F72" />
+</shape>

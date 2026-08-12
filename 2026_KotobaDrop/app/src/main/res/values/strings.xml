@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">KotobaDrop</string>
+
+    <!-- Home -->
+    <string name="home_word_count">%1$d words loaded</string>
+    <string name="home_loading">Loading words…</string>
+    <string name="home_endless">Endless</string>
+    <string name="home_campaign">Campaign</string>
+    <string name="home_dictionary">Dictionary</string>
+    <string name="home_settings">Settings</string>
+    <string name="home_tutorial">How to Play</string>
+    <string name="home_stats">Stats</string>
+    <string name="home_endless_best">Best: %1$d</string>
+    <string name="home_campaign_status">%1$s · Level %2$d</string>
+
+    <!-- Shared labels (Endless setup + Settings) -->
+    <string name="label_furigana">Furigana</string>
+    <string name="action_start">Start</string>
+    <string name="endless_zen_label">Zen mode (no lives)</string>
+
+    <!-- Section labels (redesign, all-caps/tracked style) -->
+    <string name="section_speed">SPEED</string>
+    <string name="section_word_difficulty_up_to">WORD DIFFICULTY — up to %1$s</string>
+    <string name="section_rules">RULES</string>
+    <string name="section_general">GENERAL</string>
+    <string name="section_gameplay">GAMEPLAY</string>
+    <string name="section_sound_extras">SOUND &amp; EXTRAS</string>
+    <string name="section_collection_by_level">COLLECTION BY LEVEL</string>
+    <string name="section_play_stats">PLAY STATS</string>
+    <string name="section_word_data">WORD DATA</string>
+    <string name="section_typefaces">TYPEFACES</string>
+
+    <!-- Lowercase stat-grid labels (Results, Level Result, Stats) -->
+    <string name="stat_label_cleared">cleared</string>
+    <string name="stat_label_missed">missed</string>
+    <string name="stat_label_max_combo">max combo</string>
+    <string name="stat_label_accuracy">accuracy</string>
+    <string name="stat_label_stars">stars</string>
+    <string name="stat_label_best_score">best score</string>
+    <string name="stat_label_runs_played">runs played</string>
+    <string name="stat_label_total_cleared">total cleared</string>
+    <string name="stat_points_caption">points</string>
+
+    <!-- SpeedDifficulty labels -->
+    <string name="speed_easy">Easy</string>
+    <string name="speed_normal">Normal</string>
+    <string name="speed_hard">Hard</string>
+    <string name="speed_expert">Expert</string>
+
+    <!-- Campaign -->
+    <string name="campaign_title">Campaign</string>
+    <string name="campaign_level_target">×%1$d</string>
+    <string name="campaign_level_best">★%1$d</string>
+    <string name="campaign_level_a11y">Level %1$d, target %2$d clears</string>
+    <string name="campaign_section_0">Kana Basics</string>
+    <string name="campaign_section_1">N5 Words</string>
+    <string name="campaign_section_2">N4–N3 Words</string>
+    <string name="campaign_section_3">N3–N2 Words</string>
+    <string name="campaign_section_4">Advanced</string>
+
+    <!-- Level result -->
+    <string name="level_result_clear">Level Clear!</string>
+    <string name="level_result_failed">Level Failed</string>
+    <string name="level_result_next">Next Level</string>
+    <string name="level_result_retry">Retry</string>
+    <string name="level_result_level_select">Level Select</string>
+
+    <!-- Results (Endless) -->
+    <string name="results_best">Best score: %1$d</string>
+    <string name="results_new_record">New record!</string>
+    <string name="results_play_again">Play Again</string>
+    <string name="results_home">Home</string>
+    <string name="run_missed_words_title">Words you missed</string>
+
+    <!-- Game HUD -->
+    <string name="game_pause">Pause</string>
+    <string name="game_resume">Resume</string>
+    <string name="game_paused">PAUSED</string>
+    <string name="game_score_pt">%1$dpt</string>
+    <string name="game_cleared_endless">×%1$d</string>
+    <string name="game_cleared_target">%1$d/%2$d</string>
+    <string name="game_combo">combo %1$d</string>
+    <string name="game_lives_desc">%1$d lives left</string>
+    <string name="game_quit_title">Quit this run?</string>
+    <string name="game_quit_body">Progress from this run will be lost.</string>
+    <string name="game_quit_confirm">Quit</string>
+    <string name="game_quit_cancel">Keep playing</string>
+    <string name="game_finish_button">Finish level</string>
+    <string name="game_finish_title">Finish this level?</string>
+    <string name="game_finish_body">You\'ve reached the target — your completion and score will be saved.</string>
+    <string name="game_finish_confirm">Finish</string>
+    <string name="game_finish_run">Finish run</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_language_label">Language</string>
+    <string name="settings_input_mode_label">Input mode</string>
+    <string name="input_mode_romaji">Romaji</string>
+    <string name="input_mode_ime">Japanese IME</string>
+    <string name="settings_sound_label">Sound</string>
+    <string name="settings_theme_label">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_credits">Credits</string>
+    <string name="settings_do_not_touch_label">Do not touch</string>
+    <string name="settings_reset_button">Reset progress</string>
+    <string name="settings_reset_title">Reset all progress?</string>
+    <string name="settings_reset_body">This clears your word dictionary and campaign completion. Best scores are kept. This can\'t be undone.</string>
+    <string name="settings_reset_confirm">Reset</string>
+
+    <!-- Dictionary -->
+    <string name="dictionary_title">Dictionary</string>
+    <string name="dictionary_empty">Play a round to start collecting words.</string>
+    <string name="dictionary_search_placeholder">Search surface, reading, or meaning</string>
+    <string name="dictionary_missed_section">Words you keep missing</string>
+    <string name="dictionary_all_section">All met words</string>
+    <string name="dictionary_no_results">No words match “%1$s”.</string>
+    <string name="dictionary_stats">Seen %1$d · Cleared %2$d · Missed %3$d</string>
+    <string name="dictionary_reset_button">Reset history</string>
+    <string name="dictionary_reset_title">Reset history?</string>
+    <string name="dictionary_reset_body">This clears seen, cleared, and missed counts for every word in your dictionary. This can’t be undone.</string>
+    <string name="dictionary_reset_confirm">Reset</string>
+    <string name="dictionary_reset_cancel">Cancel</string>
+    <string name="dictionary_review_button">Practice missed words</string>
+
+    <!-- Stats -->
+    <string name="stats_title">Stats</string>
+    <string name="stats_of_total_met">of %1$d words met</string>
+    <string name="stats_ratio">%1$d / %2$d</string>
+
+    <!-- Credits -->
+    <string name="credits_title">Credits</string>
+    <string name="credits_word_data_body">JMdict and KANJIDIC2, courtesy of the Electronic Dictionary Research and Development Group (EDRDG).</string>
+    <string name="credits_word_data_license">Licensed under CC BY-SA 4.0</string>
+    <string name="credits_fonts_body">Hachi Maru Pop and Yusei Magic by Fontworks, via Google Fonts.</string>
+    <string name="credits_fonts_license">Licensed under SIL Open Font License 1.1</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial_title">How to Play</string>
+    <string name="tutorial_basics_title">The Basics</string>
+    <string name="tutorial_basics_body">Japanese words fall from the top of the screen, showing their kanji. Type the word\'s reading before it reaches the line at the bottom.</string>
+    <string name="tutorial_typing_title">Typing</string>
+    <string name="tutorial_typing_body">As you type, your input is shown converted to kana. Any word on screen whose reading matches gets highlighted — finish it exactly and it clears automatically, no tapping needed.</string>
+    <string name="tutorial_spelling_title">Tricky Spellings</string>
+    <string name="tutorial_spelling_body">Long vowels are typed literally: とうきょう is toukyou, not tokyo. Type ん as nn, and a small っ by doubling the next consonant (きって = kitte). For the katakana long mark (ー) you can type a dash or spell out the vowel.</string>
+    <string name="tutorial_dead_input_title">Watch for Red</string>
+    <string name="tutorial_dead_input_body">If your input doesn\'t match the start of any word on screen, it turns red. Backspace and try again.</string>
+    <string name="tutorial_misses_title">Misses &amp; Lives</string>
+    <string name="tutorial_misses_body">A word that reaches the line costs a life and briefly flashes its reading. You start with 3 lives — lose them all and the run ends.</string>
+    <string name="tutorial_scoring_title">Combo &amp; Scoring</string>
+    <string name="tutorial_scoring_body">Clearing words quickly and back-to-back builds a combo for bonus points. Longer words and harder kanji are worth more.</string>
+    <string name="tutorial_furigana_title">Furigana</string>
+    <string name="tutorial_furigana_body">Turn on furigana in Settings to show each word\'s reading above it — helpful while you\'re still learning.</string>
+    <string name="tutorial_input_mode_title">Input Modes</string>
+    <string name="tutorial_input_mode_body">By default you type romaji (Latin letters), automatically converted to kana. In Settings you can switch to typing hiragana directly with a Japanese keyboard instead.</string>
+    <string name="tutorial_modes_title">Game Modes</string>
+    <string name="tutorial_modes_body">Endless: pick a difficulty and play until you run out of lives. Campaign: clear structured levels — reach the target number of clears to pass and unlock the next one. After passing you can keep playing to push your score higher.</string>
+    <string name="tutorial_pause_title">Pausing</string>
+    <string name="tutorial_pause_body">Tap the pause button anytime. The game also pauses automatically if you leave the app mid-run.</string>
+</resources>

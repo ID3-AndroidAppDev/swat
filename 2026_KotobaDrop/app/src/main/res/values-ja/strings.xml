@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">KotobaDrop</string>
+
+    <!-- Home -->
+    <string name="home_word_count">%1$d語読み込み済み</string>
+    <string name="home_loading">読み込み中…</string>
+    <string name="home_endless">エンドレス</string>
+    <string name="home_campaign">キャンペーン</string>
+    <string name="home_dictionary">辞書</string>
+    <string name="home_settings">設定</string>
+    <string name="home_tutorial">遊び方</string>
+    <string name="home_stats">統計</string>
+    <string name="home_endless_best">ベスト: %1$d</string>
+    <string name="home_campaign_status">%1$s・レベル%2$d</string>
+
+    <!-- Shared labels (Endless setup + Settings) -->
+    <string name="label_furigana">ふりがな</string>
+    <string name="action_start">スタート</string>
+    <string name="endless_zen_label">禅モード(ライフなし)</string>
+
+    <!-- Section labels (redesign, all-caps/tracked style) -->
+    <string name="section_speed">スピード</string>
+    <string name="section_word_difficulty_up_to">単語の難易度 — %1$sまで</string>
+    <string name="section_rules">ルール</string>
+    <string name="section_general">一般</string>
+    <string name="section_gameplay">ゲームプレイ</string>
+    <string name="section_sound_extras">サウンド・その他</string>
+    <string name="section_collection_by_level">レベル別収集状況</string>
+    <string name="section_play_stats">プレイ統計</string>
+    <string name="section_word_data">単語データ</string>
+    <string name="section_typefaces">書体</string>
+
+    <!-- Lowercase stat-grid labels (Results, Level Result, Stats) -->
+    <string name="stat_label_cleared">クリア</string>
+    <string name="stat_label_missed">ミス</string>
+    <string name="stat_label_max_combo">最大コンボ</string>
+    <string name="stat_label_accuracy">正解率</string>
+    <string name="stat_label_stars">スター</string>
+    <string name="stat_label_best_score">ベストスコア</string>
+    <string name="stat_label_runs_played">プレイ回数</string>
+    <string name="stat_label_total_cleared">累計クリア</string>
+    <string name="stat_points_caption">ポイント</string>
+
+    <!-- SpeedDifficulty labels -->
+    <string name="speed_easy">かんたん</string>
+    <string name="speed_normal">ふつう</string>
+    <string name="speed_hard">むずかしい</string>
+    <string name="speed_expert">エキスパート</string>
+
+    <!-- Campaign -->
+    <string name="campaign_title">キャンペーン</string>
+    <string name="campaign_level_target">×%1$d</string>
+    <string name="campaign_level_best">★%1$d</string>
+    <string name="campaign_level_a11y">レベル%1$d、目標クリア数%2$d</string>
+    <string name="campaign_section_0">かな基礎</string>
+    <string name="campaign_section_1">N5の単語</string>
+    <string name="campaign_section_2">N4〜N3の単語</string>
+    <string name="campaign_section_3">N3〜N2の単語</string>
+    <string name="campaign_section_4">上級</string>
+
+    <!-- Level result -->
+    <string name="level_result_clear">レベルクリア!</string>
+    <string name="level_result_failed">レベル失敗</string>
+    <string name="level_result_next">次のレベル</string>
+    <string name="level_result_retry">リトライ</string>
+    <string name="level_result_level_select">レベル選択</string>
+
+    <!-- Results (Endless) -->
+    <string name="results_best">ベストスコア: %1$d</string>
+    <string name="results_new_record">新記録!</string>
+    <string name="results_play_again">もう一度プレイ</string>
+    <string name="results_home">ホーム</string>
+    <string name="run_missed_words_title">ミスした単語</string>
+
+    <!-- Game HUD -->
+    <string name="game_pause">一時停止</string>
+    <string name="game_resume">再開</string>
+    <string name="game_paused">一時停止中</string>
+    <string name="game_score_pt">%1$dpt</string>
+    <string name="game_cleared_endless">×%1$d</string>
+    <string name="game_cleared_target">%1$d/%2$d</string>
+    <string name="game_combo">コンボ %1$d</string>
+    <string name="game_lives_desc">残りライフ%1$d</string>
+    <string name="game_quit_title">ランを終了しますか?</string>
+    <string name="game_quit_body">このランの進行は失われます。</string>
+    <string name="game_quit_confirm">終了</string>
+    <string name="game_quit_cancel">続ける</string>
+    <string name="game_finish_button">レベルを終える</string>
+    <string name="game_finish_title">このレベルを終えますか?</string>
+    <string name="game_finish_body">目標を達成しました。クリアとスコアが保存されます。</string>
+    <string name="game_finish_confirm">終える</string>
+    <string name="game_finish_run">ランを終える</string>
+
+    <!-- Settings -->
+    <string name="settings_title">設定</string>
+    <string name="settings_language_label">言語</string>
+    <string name="settings_input_mode_label">入力方法</string>
+    <string name="input_mode_romaji">ローマ字</string>
+    <string name="input_mode_ime">日本語IME</string>
+    <string name="settings_sound_label">音</string>
+    <string name="settings_theme_label">テーマ</string>
+    <string name="theme_system">端末に合わせる</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="settings_credits">クレジット</string>
+    <string name="settings_do_not_touch_label">触らないで</string>
+    <string name="settings_reset_button">進行状況をリセット</string>
+    <string name="settings_reset_title">すべての進行状況をリセットしますか?</string>
+    <string name="settings_reset_body">単語辞書とキャンペーンのクリア状況を消去します。ベストスコアは保持されます。元に戻せません。</string>
+    <string name="settings_reset_confirm">リセット</string>
+
+    <!-- Dictionary -->
+    <string name="dictionary_title">辞書</string>
+    <string name="dictionary_empty">1ラウンドプレイすると単語が集まり始めます。</string>
+    <string name="dictionary_search_placeholder">表記・読み・意味で検索</string>
+    <string name="dictionary_missed_section">よく間違える単語</string>
+    <string name="dictionary_all_section">出会った単語すべて</string>
+    <string name="dictionary_no_results">「%1$s」に一致する単語はありません。</string>
+    <string name="dictionary_stats">出現 %1$d ・ クリア %2$d ・ ミス %3$d</string>
+    <string name="dictionary_reset_button">履歴をリセット</string>
+    <string name="dictionary_reset_title">履歴をリセットしますか?</string>
+    <string name="dictionary_reset_body">辞書に記録されたすべての単語の出現・クリア・ミス数を消去します。元に戻せません。</string>
+    <string name="dictionary_reset_confirm">リセット</string>
+    <string name="dictionary_reset_cancel">キャンセル</string>
+    <string name="dictionary_review_button">ミスした単語を練習</string>
+
+    <!-- Stats -->
+    <string name="stats_title">統計</string>
+    <string name="stats_of_total_met">/ %1$d語 出会った</string>
+    <string name="stats_ratio">%1$d / %2$d</string>
+
+    <!-- Credits -->
+    <string name="credits_title">クレジット</string>
+    <string name="credits_word_data_body">JMdictとKANJIDIC2を使用しています(Electronic Dictionary Research and Development Group提供)。</string>
+    <string name="credits_word_data_license">CC BY-SA 4.0のもとで提供</string>
+    <string name="credits_fonts_body">Hachi Maru PopとYusei Magic(Fontworks制作、Google Fontsより)。</string>
+    <string name="credits_fonts_license">SIL Open Font License 1.1のもとで提供</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial_title">遊び方</string>
+    <string name="tutorial_basics_title">基本</string>
+    <string name="tutorial_basics_body">画面の上から漢字表記の単語が落ちてきます。線に届く前に、その単語の読み方を入力しましょう。</string>
+    <string name="tutorial_typing_title">入力方法</string>
+    <string name="tutorial_typing_body">入力すると、かなに変換されて表示されます。読みが一致する単語はハイライトされ、最後まで入力すると自動的にクリアされます(タップ不要)。</string>
+    <string name="tutorial_spelling_title">つづりのコツ</string>
+    <string name="tutorial_spelling_body">長音はそのまま入力します:「とうきょう」は toukyou(tokyo ではありません)。「ん」は nn、小さい「っ」は次の子音を重ねて入力します(きって = kitte)。カタカナの長音記号(ー)はハイフンでも母音でも入力できます。</string>
+    <string name="tutorial_dead_input_title">赤色に注意</string>
+    <string name="tutorial_dead_input_body">画面上のどの単語にも一致しない入力は赤色になります。バックスペースでやり直しましょう。</string>
+    <string name="tutorial_misses_title">ミスとライフ</string>
+    <string name="tutorial_misses_body">線に届いた単語はライフを1つ失い、読み方が一瞬表示されます。ライフは3つ。すべて失うとゲーム終了です。</string>
+    <string name="tutorial_scoring_title">コンボとスコア</string>
+    <string name="tutorial_scoring_body">素早く連続して単語をクリアするとコンボが発生しボーナス点が入ります。長い単語や難しい漢字はより高得点です。</string>
+    <string name="tutorial_furigana_title">ふりがな</string>
+    <string name="tutorial_furigana_body">設定でふりがなをオンにすると、単語の上に読み方が表示されます。学習中の方に便利です。</string>
+    <string name="tutorial_input_mode_title">入力モード</string>
+    <string name="tutorial_input_mode_body">通常はローマ字(アルファベット)で入力し、自動的にかなに変換されます。設定で日本語キーボードによるひらがな直接入力に切り替えることもできます。</string>
+    <string name="tutorial_modes_title">ゲームモード</string>
+    <string name="tutorial_modes_body">エンドレス: 難易度を選び、ライフがなくなるまでプレイします。キャンペーン: 決められたレベルをクリアします。目標クリア数に到達すると次のレベルが解放されます。達成後もプレイを続けてスコアを伸ばせます。</string>
+    <string name="tutorial_pause_title">一時停止</string>
+    <string name="tutorial_pause_body">いつでも一時停止ボタンをタップできます。アプリを離れると自動的に一時停止します。</string>
+</resources>

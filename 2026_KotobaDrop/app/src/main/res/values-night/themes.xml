@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Night variant of the pre-Compose window styling (see values/themes.xml) — matches
+         KotobaDropTheme's yoru background so the brief pre-Compose frame isn't a white
+         flash in dark mode. -->
+    <style name="Theme.KotobaDrop" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/yoru_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
