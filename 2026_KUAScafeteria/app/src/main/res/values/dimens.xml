@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_1">4dp</dimen>
+    <dimen name="space_2">6dp</dimen>
+    <dimen name="space_3">8dp</dimen>
+    <dimen name="space_4">10dp</dimen>
+    <dimen name="space_5">12dp</dimen>
+    <dimen name="space_6">14dp</dimen>
+    <dimen name="space_7">16dp</dimen>
+    <dimen name="space_8">20dp</dimen>
+    <dimen name="space_10">32dp</dimen>
+
+    <dimen name="radius_sm">6dp</dimen>
+    <dimen name="radius_md">8dp</dimen>
+    <dimen name="radius_lg">14dp</dimen>
+    <dimen name="radius_pill">20dp</dimen>
+
+    <dimen name="content_padding_h">16dp</dimen>
+    <dimen name="content_padding_v">12dp</dimen>
+    <dimen name="card_gap">8dp</dimen>
+    <dimen name="section_gap">16dp</dimen>
+    <dimen name="item_padding_h">14dp</dimen>
+    <dimen name="item_padding_v">12dp</dimen>
+
+    <dimen name="day_pill_min_width">44dp</dimen>
+    <dimen name="week_arrow_size">28dp</dimen>
+    <dimen name="icon_btn_size">32dp</dimen>
+    <dimen name="touch_target">44dp</dimen>
+
+    <dimen name="text_campus_name">17sp</dimen>
+    <dimen name="text_campus_label">10sp</dimen>
+    <dimen name="text_dish_name">14sp</dimen>
+    <dimen name="text_week_label">13sp</dimen>
+    <dimen name="text_section_title">11sp</dimen>
+    <dimen name="text_meta">10sp</dimen>
+    <dimen name="text_price">13sp</dimen>
+    <dimen name="text_day_number">15sp</dimen>
+</resources>

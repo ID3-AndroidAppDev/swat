@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Design system — dark theme (overrides values/colors.xml at night).
+         Values mirror web_app/public/css/styles.css [data-theme="dark"] tokens. -->
+    <color name="background_primary">#1E1C1A</color>
+    <color name="background_secondary">#2A2724</color>
+    <color name="background_tertiary">#151312</color>
+    <color name="text_primary">#F2EFEA</color>
+    <color name="text_secondary">#BDB6AC</color>
+    <color name="text_tertiary">#8C857B</color>
+    <color name="border_secondary">#3A3631</color>
+    <color name="border_tertiary">#2E2A26</color>
+    <color name="accent">#F2576E</color>
+    <color name="accent_contrast">#1E1C1A</color>
+    <color name="accent_soft">#3E2227</color>
+
+    <!-- Status chips — darker fills, lighter text for contrast -->
+    <color name="chip_allergen_bg">#412402</color>
+    <color name="chip_allergen_fg">#FAC775</color>
+    <color name="chip_halal_bg">#173404</color>
+    <color name="chip_halal_fg">#C0DD97</color>
+    <color name="chip_thai_bg">#0A2438</color>
+    <color name="chip_thai_fg">#9CC8EE</color>
+    <color name="chip_calcium_bg">#241537</color>
+    <color name="chip_calcium_fg">#C7A8F0</color>
+    <color name="chip_danger_bg">#3DCF222E</color>
+    <color name="chip_danger_fg">#FF7B85</color>
+
+    <color name="skeleton">#2A2724</color>
+
+    <!-- Status badge — brighter fg, deeper fills for dark bg -->
+    <color name="status_open_bg">#382EA043</color>
+    <color name="status_open_fg">#5FD97C</color>
+    <color name="status_open_dot">#3FCB63</color>
+    <color name="status_amber_bg">#3DD29922</color>
+    <color name="status_amber_fg">#F0C24B</color>
+    <color name="status_amber_dot">#E8B53A</color>
+    <color name="status_closed_bg">#38CF222E</color>
+    <color name="status_closed_fg">#FF7B85</color>
+    <color name="status_closed_dot">#FF6670</color>
+</resources>

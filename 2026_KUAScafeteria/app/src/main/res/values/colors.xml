@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Design system — light theme -->
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F4F2EE</color>
+    <color name="background_tertiary">#FAF8F5</color>
+    <color name="text_primary">#1C1B19</color>
+    <color name="text_secondary">#55514B</color>
+    <color name="text_tertiary">#8C857B</color>
+    <color name="border_secondary">#E2DDD5</color>
+    <color name="border_tertiary">#ECE8E1</color>
+    <color name="accent">#C8102E</color>
+    <color name="accent_contrast">#FFFFFF</color>
+    <color name="accent_soft">#FBE9EC</color>
+
+    <!-- Status chips -->
+    <color name="chip_allergen_bg">#FAEEDA</color>
+    <color name="chip_allergen_fg">#633806</color>
+    <color name="chip_halal_bg">#EAF3DE</color>
+    <color name="chip_halal_fg">#3B6D11</color>
+    <color name="chip_thai_bg">#E6F0FA</color>
+    <color name="chip_thai_fg">#0B4F82</color>
+    <color name="chip_calcium_bg">#F0EAFA</color>
+    <color name="chip_calcium_fg">#4B2A82</color>
+    <color name="chip_danger_bg">#FBE3E5</color>
+    <color name="chip_danger_fg">#CF222E</color>
+
+    <color name="skeleton">#ECE8E1</color>
+
+    <!-- Status badge (open/closing/closed) -->
+    <color name="status_open_bg">#24D9E88A</color>
+    <color name="status_open_fg">#1A7F37</color>
+    <color name="status_open_dot">#2EA043</color>
+    <color name="status_amber_bg">#2ED29922</color>
+    <color name="status_amber_fg">#9A6700</color>
+    <color name="status_amber_dot">#D29922</color>
+    <color name="status_closed_bg">#22CF222E</color>
+    <color name="status_closed_fg">#CF222E</color>
+    <color name="status_closed_dot">#CF222E</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

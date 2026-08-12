@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">KUAS Lunch</string>
+    <string name="app_full_name">KUAS Cafeteria</string>
+    <string name="campus_uzumasa">Uzumasa</string>
+    <string name="campus_kameoka">Kameoka</string>
+    <string name="campus_label">CAMPUS</string>
+    <string name="lunch_menu">Lunch Menu</string>
+    <string name="settings">Settings</string>
+    <string name="no_menu_for_day">No menu for this day.</string>
+    <string name="loading">Loading…</string>
+    <string name="error_load_menu">Couldn\'t load menu.</string>
+    <string name="retry">Retry</string>
+    <string name="offline_banner">Offline — showing last saved menu</string>
+    <string name="tray_empty">Σ 0 kcal · ¥0</string>
+    <string name="open_tray">Order ▸</string>
+    <string name="prev_week">Previous week</string>
+    <string name="next_week">Next week</string>
+    <string name="add_to_tray">Add to order</string>
+    <string name="done">Done</string>
+    <string name="clear">Clear</string>
+    <string name="your_tray">Your order</string>
+    <string name="total">Total</string>
+    <string name="halal_friendly">Halal-friendly</string>
+    <string name="allergen_disclaimer">Allergen marks indicate specified raw materials only. Information is not guaranteed accurate for all individual needs.</string>
+    <string name="set_includes">Set includes rice + soup + side</string>
+    <string name="price_label">Price</string>
+    <string name="nutrition_label">Nutrition</string>
+    <string name="la_carte">Base</string>
+    <string name="set_meal">Set</string>
+
+    <!-- Settings -->
+    <string name="language">Language</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="dynamic_color">Material You colors</string>
+    <string name="default_campus">Default campus</string>
+    <string name="allergen_filter">Allergen filter</string>
+    <string name="allergen_filter_hint">Hide dishes containing…</string>
+    <string name="about">About</string>
+    <string name="data_source">Data source</string>
+    <string name="version">Version</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_subtitle">Your daily KUAS cafeteria menu</string>
+    <string name="onboarding_welcome_detail">Uzumasa &amp; Kameoka campuses</string>
+    <string name="onboarding_lang_subtitle">You can change this anytime in Settings</string>
+    <string name="onboarding_campus_title">Choose your campus</string>
+    <string name="onboarding_campus_subtitle">We\'ll show today\'s menu for your campus by default</string>
+    <string name="onboarding_lang_title">Confirm language</string>
+    <string name="onboarding_allergens_title">Any allergens to hide?</string>
+    <string name="onboarding_allergens_subtitle">Dishes with these ingredients will be dimmed</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get started</string>
+    <string name="uzumasa_location">North Building 1F, THE COMMONS G</string>
+    <string name="kameoka_location">Hakuun Hall 2F, Restaurant Kameoka</string>
+
+    <!-- Allergen filter -->
+    <string name="filter_allergens">Filter allergens</string>
+    <string name="allergens_label">Allergens</string>
+    <string name="none_hidden">None hidden</string>
+    <string name="n_allergens_hidden">%d hidden</string>
+    <string name="filter_active_hint">Filter active — some dishes hidden</string>
+
+    <!-- Widgets -->
+    <string name="widget_today_label">KUAS Cafeteria — Today\'s menu</string>
+    <string name="widget_status_label">KUAS Cafeteria — Open status</string>
+    <string name="widget_picks_label">KUAS Cafeteria — Today\'s picks</string>
+    <string name="widget_picks_title">Today\'s picks</string>
+    <string name="widget_pick_none">No data</string>
+    <string name="status_opening_soon">🟡 Opening soon</string>
+    <string name="status_until">🕒 Until %1$s</string>
+    <string name="cd_opens_label">🟡 Opens in</string>
+    <string name="cd_closes_label">🔴 Closes in</string>
+    <string name="widget_config_title">Widget campus</string>
+    <string name="widget_config_subtitle">Which campus should this widget show?</string>
+    <string name="widget_config_follow">Follow app default</string>
+
+    <!-- Compare dishes -->
+    <string name="compare_button">Compare</string>
+    <string name="compare_count">Compare (%1$d)</string>
+    <string name="compare_title">Compare dishes</string>
+    <string name="compare_need_two">Add at least two dishes to compare. Long-press a dish to add it.</string>
+    <string name="compare_added">Added \"%1$s\" to compare</string>
+    <string name="compare_already_added">Already in compare</string>
+    <string name="compare_full">Compare holds up to %1$d dishes</string>
+    <string name="compare_cleared">Compare cleared</string>
+    <string name="compare_price">Price</string>
+    <string name="compare_kcal">Calories</string>
+    <string name="compare_protein">Protein</string>
+    <string name="compare_fat">Fat</string>
+    <string name="compare_salt">Salt</string>
+
+    <!-- Open-now status -->
+    <string name="status_open">🟢 Open now</string>
+    <string name="status_closed">⚫ Closed</string>
+    <string name="status_opens_at">🕒 Opens %1$s</string>
+    <string name="status_opens_in">🟡 Opens in %1$s</string>
+    <string name="status_closes_in">🔴 Closes in %1$s</string>
+
+    <!-- Closed state -->
+    <string name="restaurant_closed">Cafeteria closed today</string>
+    <string name="closed_reason_holiday">Holiday</string>
+
+    <!-- Allergen filter bottom sheet -->
+    <string name="hide_allergen_dishes">Hide dishes with selected allergens</string>
+
+    <!-- About dialog -->
+    <string name="about_app">KUAS Cafeteria Menu\n\nVersion %1$s\n\nDaily lunch menus for Uzumasa and Kameoka campuses, parsed from official KUAS PDFs.\n\nAllergen data is provided for reference only and may not reflect all individual needs. Always check with cafeteria staff.</string>
+    <string name="error_no_network_title">No internet connection</string>
+    <string name="error_no_network_sub">Check your connection and try again.</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night override: dark status/nav bars with light icons. Inherits the
+         rest (colors, animations) from the base Theme.KuasCafeteria. -->
+    <style name="Theme.KuasCafeteria" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/accent_contrast</item>
+        <item name="colorSurface">@color/background_primary</item>
+        <item name="android:colorBackground">@color/background_tertiary</item>
+        <item name="android:windowBackground">@color/background_tertiary</item>
+        <item name="android:statusBarColor">@color/background_primary</item>
+        <item name="android:navigationBarColor">@color/background_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowAnimationStyle">@style/FadeActivityAnim</item>
+        <item name="materialButtonStyle">@style/App.Button.Primary</item>
+    </style>
+</resources>

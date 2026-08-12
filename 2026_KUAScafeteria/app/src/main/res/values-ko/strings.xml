@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">KUAS 런치</string>
+    <string name="campus_uzumasa">우즈마사</string>
+    <string name="campus_kameoka">가메오카</string>
+    <string name="campus_label">캠퍼스</string>
+    <string name="lunch_menu">점심 메뉴</string>
+    <string name="settings">설정</string>
+    <string name="no_menu_for_day">이 날의 메뉴가 없습니다.</string>
+    <string name="loading">불러오는 중…</string>
+    <string name="error_load_menu">메뉴를 불러오지 못했습니다.</string>
+    <string name="retry">다시 시도</string>
+    <string name="offline_banner">오프라인 — 저장된 메뉴 표시 중</string>
+    <string name="tray_empty">Σ 0 kcal · ¥0</string>
+    <string name="open_tray">주문 ▸</string>
+    <string name="prev_week">이전 주</string>
+    <string name="next_week">다음 주</string>
+    <string name="add_to_tray">주문에 추가</string>
+    <string name="done">완료</string>
+    <string name="clear">지우기</string>
+    <string name="your_tray">내 주문</string>
+    <string name="total">합계</string>
+    <string name="halal_friendly">할랄 가능</string>
+    <string name="allergen_disclaimer">알레르겐 표시는 특정 원재료만 나타내며, 모든 개인의 필요에 대한 정확성을 보장하지 않습니다.</string>
+    <string name="set_includes">세트는 밥＋국＋반찬 포함</string>
+    <string name="price_label">가격</string>
+    <string name="nutrition_label">영양 성분</string>
+    <string name="la_carte">단품</string>
+    <string name="set_meal">세트</string>
+
+    <string name="language">언어</string>
+    <string name="theme">테마</string>
+    <string name="theme_system">시스템 기본값</string>
+    <string name="theme_light">라이트</string>
+    <string name="theme_dark">다크</string>
+    <string name="default_campus">기본 캠퍼스</string>
+    <string name="allergen_filter">알레르겐 필터</string>
+    <string name="allergen_filter_hint">포함된 메뉴 숨기기…</string>
+    <string name="about">앱 정보</string>
+    <string name="data_source">데이터 출처</string>
+    <string name="version">버전</string>
+
+    <string name="onboarding_welcome_subtitle">매일의 KUAS 식당 메뉴</string>
+    <string name="onboarding_welcome_detail">우즈마사 &amp; 가메오카 캠퍼스</string>
+    <string name="onboarding_lang_subtitle">설정에서 언제든지 변경할 수 있습니다</string>
+    <string name="onboarding_campus_title">캠퍼스를 선택하세요</string>
+    <string name="onboarding_campus_subtitle">기본적으로 오늘의 메뉴를 표시합니다</string>
+    <string name="onboarding_lang_title">언어 확인</string>
+    <string name="onboarding_allergens_title">숨길 알레르겐이 있나요?</string>
+    <string name="onboarding_allergens_subtitle">이 성분이 포함된 메뉴는 흐리게 표시됩니다</string>
+    <string name="skip">건너뛰기</string>
+    <string name="next">다음</string>
+    <string name="get_started">시작하기</string>
+    <string name="uzumasa_location">북관 1F, THE COMMONS G</string>
+    <string name="kameoka_location">백운관 2F, 레스토랑 가메오카</string>
+
+    <string name="filter_allergens">알레르겐 필터링</string>
+    <string name="allergens_label">알레르겐</string>
+    <string name="none_hidden">숨김 없음</string>
+    <string name="n_allergens_hidden">%d개 숨김</string>
+    <string name="filter_active_hint">필터 적용 중 — 일부 메뉴 숨김</string>
+
+    <string name="compare_button">비교</string>
+    <string name="compare_count">비교 (%1$d)</string>
+    <string name="compare_title">메뉴 비교</string>
+    <string name="compare_need_two">비교하려면 메뉴를 2개 이상 추가하세요. 메뉴를 길게 눌러 추가합니다.</string>
+    <string name="compare_added">\"%1$s\"을(를) 비교에 추가했습니다</string>
+    <string name="compare_already_added">이미 비교에 있습니다</string>
+    <string name="compare_full">비교는 최대 %1$d개까지 가능합니다</string>
+    <string name="compare_cleared">비교를 지웠습니다</string>
+    <string name="compare_price">가격</string>
+    <string name="compare_kcal">칼로리</string>
+    <string name="compare_protein">단백질</string>
+    <string name="compare_fat">지방</string>
+    <string name="compare_salt">염분</string>
+
+    <string name="restaurant_closed">오늘 식당 휴무</string>
+    <string name="closed_reason_holiday">공휴일</string>
+
+    <string name="hide_allergen_dishes">선택한 알레르겐이 포함된 메뉴 숨기기</string>
+
+    <string name="about_app">KUAS Cafeteria — 식당 메뉴\n\n버전 %1$s\n\n우즈마사 및 가메오카 캠퍼스의 매일 점심 메뉴, 공식 KUAS PDF에서 분석.\n\n알레르겐 정보는 참고용이며 모든 개인의 필요를 반영하지 못할 수 있습니다. 반드시 식당 직원에게 확인하세요.</string>
+    <string name="error_no_network_title">인터넷 연결 없음</string>
+    <string name="error_no_network_sub">연결을 확인하고 다시 시도하세요.</string>
+</resources>

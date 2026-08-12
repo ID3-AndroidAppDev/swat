@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Segmented campus switcher track — mirrors web .campus-switch
+     (background-secondary fill, radius-md). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/background_secondary" />
+    <corners android:radius="@dimen/radius_md" />
+</shape>

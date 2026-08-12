@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">KUAS午餐</string>
+    <string name="campus_uzumasa">太秦</string>
+    <string name="campus_kameoka">龟冈</string>
+    <string name="campus_label">校区</string>
+    <string name="lunch_menu">午餐菜单</string>
+    <string name="settings">设置</string>
+    <string name="no_menu_for_day">当天没有菜单。</string>
+    <string name="loading">加载中…</string>
+    <string name="error_load_menu">无法加载菜单。</string>
+    <string name="retry">重试</string>
+    <string name="offline_banner">离线 — 显示已保存的菜单</string>
+    <string name="tray_empty">Σ 0 kcal · ¥0</string>
+    <string name="open_tray">点单 ▸</string>
+    <string name="prev_week">上一周</string>
+    <string name="next_week">下一周</string>
+    <string name="add_to_tray">加入点单</string>
+    <string name="done">完成</string>
+    <string name="clear">清除</string>
+    <string name="your_tray">您的点单</string>
+    <string name="total">合计</string>
+    <string name="halal_friendly">清真友好</string>
+    <string name="allergen_disclaimer">过敏原标识仅表示特定原材料，不保证适用于所有个人需求。</string>
+    <string name="set_includes">套餐含米饭＋汤＋小菜</string>
+    <string name="price_label">价格</string>
+    <string name="nutrition_label">营养成分</string>
+    <string name="la_carte">单点</string>
+    <string name="set_meal">套餐</string>
+
+    <string name="language">语言</string>
+    <string name="theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="default_campus">默认校区</string>
+    <string name="allergen_filter">过敏原筛选</string>
+    <string name="allergen_filter_hint">隐藏含有以下成分的菜品…</string>
+    <string name="about">关于</string>
+    <string name="data_source">数据来源</string>
+    <string name="version">版本</string>
+
+    <string name="onboarding_welcome_subtitle">每日KUAS食堂菜单</string>
+    <string name="onboarding_welcome_detail">太秦＆龟冈校区</string>
+    <string name="onboarding_lang_subtitle">您可以随时在设置中更改</string>
+    <string name="onboarding_campus_title">选择您的校区</string>
+    <string name="onboarding_campus_subtitle">默认显示您校区的今日菜单</string>
+    <string name="onboarding_lang_title">确认语言</string>
+    <string name="onboarding_allergens_title">需要隐藏的过敏原？</string>
+    <string name="onboarding_allergens_subtitle">含这些成分的菜品将变暗显示</string>
+    <string name="skip">跳过</string>
+    <string name="next">下一步</string>
+    <string name="get_started">开始使用</string>
+    <string name="uzumasa_location">北楼1F, THE COMMONS G</string>
+    <string name="kameoka_location">白云馆2F, 餐厅龟冈</string>
+
+    <string name="filter_allergens">筛选过敏原</string>
+    <string name="allergens_label">过敏原</string>
+    <string name="none_hidden">未隐藏</string>
+    <string name="n_allergens_hidden">已隐藏 %d 项</string>
+    <string name="filter_active_hint">筛选已启用 — 部分菜品已隐藏</string>
+
+    <string name="compare_button">对比</string>
+    <string name="compare_count">对比 (%1$d)</string>
+    <string name="compare_title">对比菜品</string>
+    <string name="compare_need_two">请至少添加两道菜品进行对比。长按菜品即可添加。</string>
+    <string name="compare_added">已将“%1$s”加入对比</string>
+    <string name="compare_already_added">已在对比中</string>
+    <string name="compare_full">对比最多容纳%1$d道菜品</string>
+    <string name="compare_cleared">已清空对比</string>
+    <string name="compare_price">价格</string>
+    <string name="compare_kcal">热量</string>
+    <string name="compare_protein">蛋白质</string>
+    <string name="compare_fat">脂肪</string>
+    <string name="compare_salt">盐分</string>
+
+    <string name="restaurant_closed">食堂今日休息</string>
+    <string name="closed_reason_holiday">节假日</string>
+
+    <string name="hide_allergen_dishes">隐藏含所选过敏原的菜品</string>
+
+    <string name="about_app">KUAS Cafeteria — 食堂菜单\n\n版本 %1$s\n\n太秦与龟冈校区的每日午餐菜单，解析自官方KUAS PDF。\n\n过敏原信息仅供参考，可能无法反映所有个人需求。请务必向食堂工作人员确认。</string>
+    <string name="error_no_network_title">没有网络连接</string>
+    <string name="error_no_network_sub">请检查网络连接后重试。</string>
+</resources>

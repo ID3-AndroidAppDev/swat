@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">KUASランチ</string>
+    <string name="campus_uzumasa">太秦</string>
+    <string name="campus_kameoka">亀岡</string>
+    <string name="campus_label">キャンパス</string>
+    <string name="lunch_menu">ランチメニュー</string>
+    <string name="settings">設定</string>
+    <string name="no_menu_for_day">この日のメニューはありません。</string>
+    <string name="loading">読み込み中…</string>
+    <string name="error_load_menu">メニューを読み込めませんでした。</string>
+    <string name="retry">再試行</string>
+    <string name="offline_banner">オフライン — 保存済みメニューを表示中</string>
+    <string name="tray_empty">Σ 0 kcal · ¥0</string>
+    <string name="open_tray">注文 ▸</string>
+    <string name="prev_week">前の週</string>
+    <string name="next_week">次の週</string>
+    <string name="add_to_tray">注文に追加</string>
+    <string name="done">完了</string>
+    <string name="clear">クリア</string>
+    <string name="your_tray">注文</string>
+    <string name="total">合計</string>
+    <string name="halal_friendly">ハラル対応</string>
+    <string name="allergen_disclaimer">アレルゲン表示は特定原材料のみを示します。すべての個別ニーズに対する正確性は保証されません。</string>
+    <string name="set_includes">セットはライス＋スープ＋小鉢付き</string>
+    <string name="price_label">価格</string>
+    <string name="nutrition_label">栄養成分</string>
+    <string name="la_carte">単品</string>
+    <string name="set_meal">セット</string>
+
+    <string name="language">言語</string>
+    <string name="theme">テーマ</string>
+    <string name="theme_system">システム設定に従う</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="default_campus">デフォルトキャンパス</string>
+    <string name="allergen_filter">アレルゲンフィルター</string>
+    <string name="allergen_filter_hint">含む料理を非表示…</string>
+    <string name="about">アプリについて</string>
+    <string name="data_source">データソース</string>
+    <string name="version">バージョン</string>
+
+    <string name="onboarding_welcome_subtitle">毎日のKUAS食堂メニュー</string>
+    <string name="onboarding_welcome_detail">太秦＆亀岡キャンパス</string>
+    <string name="onboarding_lang_subtitle">設定からいつでも変更できます</string>
+    <string name="onboarding_campus_title">キャンパスを選択</string>
+    <string name="onboarding_campus_subtitle">デフォルトで今日のメニューを表示します</string>
+    <string name="onboarding_lang_title">言語を確認</string>
+    <string name="onboarding_allergens_title">非表示にするアレルゲンは？</string>
+    <string name="onboarding_allergens_subtitle">これらを含む料理は暗く表示されます</string>
+    <string name="skip">スキップ</string>
+    <string name="next">次へ</string>
+    <string name="get_started">始める</string>
+    <string name="uzumasa_location">北館1F, THE COMMONS G</string>
+    <string name="kameoka_location">白雲館2F, レストラン亀岡</string>
+
+    <string name="filter_allergens">アレルゲンを絞り込む</string>
+    <string name="allergens_label">アレルゲン</string>
+    <string name="none_hidden">非表示なし</string>
+    <string name="n_allergens_hidden">%d 件非表示</string>
+    <string name="filter_active_hint">フィルター適用中 — 一部の料理を非表示</string>
+
+    <string name="compare_button">比較</string>
+    <string name="compare_count">比較 (%1$d)</string>
+    <string name="compare_title">料理を比較</string>
+    <string name="compare_need_two">比較するには2品以上追加してください。料理を長押しで追加。</string>
+    <string name="compare_added">「%1$s」を比較に追加しました</string>
+    <string name="compare_already_added">すでに比較に追加済み</string>
+    <string name="compare_full">比較は最大%1$d品までです</string>
+    <string name="compare_cleared">比較をクリアしました</string>
+    <string name="compare_price">価格</string>
+    <string name="compare_kcal">カロリー</string>
+    <string name="compare_protein">タンパク質</string>
+    <string name="compare_fat">脂質</string>
+    <string name="compare_salt">塩分</string>
+
+    <string name="restaurant_closed">本日食堂は休業です</string>
+    <string name="closed_reason_holiday">祝日</string>
+
+    <string name="hide_allergen_dishes">選択したアレルゲンを含む料理を非表示</string>
+
+    <string name="about_app">KUAS Cafeteria — 食堂メニュー\n\nバージョン %1$s\n\n太秦・亀岡キャンパスの毎日のランチメニュー。公式KUAS PDFから解析。\n\nアレルゲン情報は参考用であり、すべての個別ニーズを反映しない場合があります。必ず食堂スタッフにご確認ください。</string>
+    <string name="error_no_network_title">インターネット接続がありません</string>
+    <string name="error_no_network_sub">接続を確認してもう一度お試しください。</string>
+</resources>

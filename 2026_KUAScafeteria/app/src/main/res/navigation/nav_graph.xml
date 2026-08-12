@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dayViewFragment">
+
+    <fragment
+        android:id="@+id/dayViewFragment"
+        android:name="com.murimgod.kuas_cafeteria_app.ui.dayview.DayViewFragment"
+        android:label="Lunch Menu">
+        <action
+            android:id="@+id/action_dayView_to_itemDetail"
+            app:destination="@id/itemDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dayView_to_settings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.murimgod.kuas_cafeteria_app.ui.itemdetail.ItemDetailFragment"
+        android:label="Item Detail">
+        <argument
+            android:name="itemJson"
+            app:argType="string" />
+        <argument
+            android:name="campus"
+            app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.murimgod.kuas_cafeteria_app.ui.settings.SettingsFragment"
+        android:label="Settings" />
+</navigation>
